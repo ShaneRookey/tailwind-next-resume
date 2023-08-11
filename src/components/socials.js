@@ -26,7 +26,7 @@ function Socials() {
             </div>
             {!showInsta && !showLinkedIn ? renderSocialLabel() : undefined}
             {showInsta ?
-                <div className="flex row-span-3">
+                <div className="lg:flex gap-5 w-max mx-auto">
                     <InstagramEmbed className="m-5" url="https://www.instagram.com/p/CvUkN-iRZEH/" width={400}/>
                     <InstagramEmbed className="m-5" url="https://www.instagram.com/p/CqiaUfpMwFf/" width={400}/>
                     <InstagramEmbed className="m-5" url="https://www.instagram.com/p/CfDF0SEMN81/?img_index=1" width={400}/>

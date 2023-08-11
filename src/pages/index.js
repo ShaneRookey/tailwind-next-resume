@@ -15,12 +15,10 @@ export default function Home() {
             <link rel="icon" href='/favicon.ico' />
         </Head>
 
-        <main className='bg-gray-100 px-10 dark:bg-gray-900'>
+        <main className='bg-gray-100 px-10 dark:bg-gray-900 pb-2'>
             <section className='min-h-screen'>
                 <Header onDarkModeClick={() => setDarkMode(!darkMode)}/>
                 <Summary />
-            </section>
-            <section className='pb-2'>
                 <Socials />
             </section>
         </main>
