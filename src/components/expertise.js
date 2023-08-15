@@ -24,7 +24,7 @@ const SUPPORT_MENTOR = {
     title: "Support Team Mentor at AlsoEnergy",
     date: "From October 2019 - March 2021",
     data: [
-        "I became the go-to person for weird one-off problems that have were uncommon. My ability to diagnose and troubleshoot software coupled with hardware was my strength in this role.",
+        "I became the go-to person for weird one-off problems that were uncommon. My ability to diagnose and troubleshoot software coupled with hardware was my strength in this role.",
         "I began training the tier 2s by observing their live calls and figuring out which topics to cover each week to improve the efficiency of the support team.",
         "Onboarded new members and documented processes to ensure the success of the team, even when I was not there."
     ]
