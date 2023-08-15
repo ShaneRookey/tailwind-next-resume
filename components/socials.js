@@ -1,3 +1,4 @@
+'use client'
 import { useState } from "react";
 import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { InstagramEmbed, LinkedInEmbed } from 'react-social-media-embed';

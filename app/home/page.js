@@ -1,9 +1,10 @@
+'use client'
 import Image from "next/image";
 import { useState } from "react";
-import shane from "../public/shane.png";
-import Expertise from "./expertise";
+import Expertise from "../../components/expertise";
+import shane from "../../public/shane.png";
 
-function Summary() {
+export default function Home() {
     const [showWorkExperience, setShowWorkExperience] = useState(false);
     
     return (
@@ -36,5 +37,3 @@ function Summary() {
         </>
     );
 }
-
-export default Summary;
