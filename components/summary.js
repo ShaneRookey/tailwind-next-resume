@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import shane from "../../public/shane.png";
+import shane from "../public/shane.png";
 import Expertise from "./expertise";
 
 function Summary() {
