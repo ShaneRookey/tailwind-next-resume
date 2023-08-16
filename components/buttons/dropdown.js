@@ -22,7 +22,7 @@ function Dropdown() {
             setSelection(selection);
             return;
         }
-        if (!selection && !window.location.pathname) {
+        if (!selection || window.location.pathname == "/") {
             setSelection("home")
             return;
         }
