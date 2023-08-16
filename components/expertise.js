@@ -41,7 +41,7 @@ const ETC_SUPPORT = {
 function Expertise() {
     return ( 
         <div>
-            <h1 className="text-5xl flex justify-center mt-10 text-teal-700 font-medium">Professional Experience</h1>
+            <h1 className="text-5xl flex justify-center mt-10 text-teal-800 font-medium dark:text-white">Professional Experience</h1>
             <JobDescription title={SOFTWARE_ENGINEER.title} date={SOFTWARE_ENGINEER.date} data={SOFTWARE_ENGINEER.data} />
             <JobDescription title={QA_ENGINEER.title} date={QA_ENGINEER.date} data={QA_ENGINEER.data} />
             <JobDescription title={SUPPORT_MENTOR.title} date={SUPPORT_MENTOR.date} data={SUPPORT_MENTOR.data} />

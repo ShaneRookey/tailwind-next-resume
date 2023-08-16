@@ -5,8 +5,8 @@ function Header() {
     return ( 
         <nav className='py-6 mb-6 flex justify-between'>
             <div>
-                <h1 className='text-sm font-burtons pt-2 text-teal-700'>Created by Shane Rookey</h1>
-                <h2 className='text-xs font-burtons  text-teal-700'>Powered By React, Next.js & Tailwind.css</h2>
+                <h1 className='text-sm font-burtons pt-2 text-teal-700 dark:text-white'>Created by Shane Rookey</h1>
+                <h2 className='text-xs font-burtons  text-teal-700 dark:text-white'>Powered By React, Next.js & Tailwind.css</h2>
             </div>
             <div className="flex items-center">
                 <Darkmode />

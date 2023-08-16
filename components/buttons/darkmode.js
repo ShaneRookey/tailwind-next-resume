@@ -7,7 +7,7 @@ export default function Darkmode() {
     
 return (
     <a
-        className='cursor-pointer text-xl dark:text-teal-700'
+        className='hover:shadow shadow-black cursor-pointer text-xl text-teal-800 dark:text-white'
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
         <BsFillMoonStarsFill />

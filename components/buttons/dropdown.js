@@ -1,11 +1,11 @@
 'use client'
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const PAGES = ["Home", "Resume", "Fun"]
+const PAGES = ["home", "resume", "fun"]
 
 function Dropdown() {
-    const [ selection, setSelection ] = useState("Home");
+    const [ selection, setSelection ] = useState();
     const [ isOpen, setIsOpen ] = useState(false);
 
     const handleOpen = () => {
@@ -17,18 +17,24 @@ function Dropdown() {
         setIsOpen(false)
     }
 
+    useEffect(() => {
+        if (!selection) {
+            setSelection(window.location.pathname.replace("/",""));
+        }
+    }, [selection]);
+
     return ( 
-        <div>
-            <button className='bg-gradient-to-r from-teal-800 to-teal-600 text-white px-4 py-2 rounded-md ml-8 w-40' onClick={handleOpen}>
-                {selection ?? "Home"}
+        <div className="">
+            <button className='hover:shadow-xl shadow shadow-gray-800 bg-gradient-to-r from-teal-800 to-teal-600 text-white px-4 py-2 rounded-md ml-8 w-40' onClick={handleOpen}>
+                {selection?.toLocaleUpperCase()}
             </button>
             {isOpen ? 
                 <ul className="absolute">
                     {PAGES.map((page, index) => {
-                        return page != selection ?
-                            <li key={index} className="bg-gradient-to-r from-teal-800 to-teal-600 text-white px-4 py-2 text-center ml-8 rounded-md w-40 m-2">
-                                <Link onClick={handleClick} href={`/${page.toLocaleLowerCase()}`}>
-                                    {page}
+                        return page.toLocaleLowerCase() != selection.toLocaleLowerCase() ?
+                            <li key={index} className="hover:shadow-xl shadow shadow-gray-800 bg-gradient-to-r from-teal-800 to-teal-600 text-white px-4 py-2 text-center ml-8 rounded-md w-40 m-2">
+                                <Link onClick={handleClick} href={`/${page}`}>
+                                    {page.toLocaleUpperCase()}
                                 </Link>
                             </li>
                             : undefined

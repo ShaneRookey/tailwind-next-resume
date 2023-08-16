@@ -16,14 +16,14 @@ function Socials() {
     }
 
     const renderSocialLabel = () => {
-        return <div className="text-md font-burtons text-center mb-5 dark:text-teal-50">Click to see updates on my latest Instagram and LinkedIn posts!</div>;
+        return <div className="text-md font-burtons text-center mb-5 text-teal-800 dark:text-white">Click to see updates on my latest Instagram and LinkedIn posts!</div>;
     }
 
     return ( 
         <div>
-            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-                <AiFillInstagram className="cursor-pointer dark:text-teal-700" onClick={handleInstaClick}/>
-                <AiFillLinkedin className="cursor-pointer dark:text-teal-700" onClick={handleLinkedInClick}/>
+            <div className="text-5xl flex justify-center gap-16 py-3 text-teal-800">
+                <AiFillInstagram className="cursor-pointer dark:text-white" onClick={handleInstaClick}/>
+                <AiFillLinkedin className="cursor-pointer dark:text-white" onClick={handleLinkedInClick}/>
             </div>
             {!showInsta && !showLinkedIn ? renderSocialLabel() : undefined}
             {showInsta ?
