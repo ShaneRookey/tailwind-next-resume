@@ -1,4 +1,3 @@
-'use client'
 import Header from '@/components/header'
 import Socials from '@/components/socials'
 import { Inter } from 'next/font/google'
