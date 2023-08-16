@@ -18,9 +18,15 @@ function Dropdown() {
     }
 
     useEffect(() => {
-        if (!selection) {
-            setSelection(window.location.pathname.replace("/",""));
+        if (selection && !window.location.pathname.includes(selection)) {
+            setSelection(selection);
+            return;
         }
+        if (!selection && !window.location.pathname) {
+            setSelection("home")
+            return;
+        }
+        setSelection(window.location.pathname.replace("/", ""))
     }, [selection]);
 
     return ( 
@@ -31,7 +37,7 @@ function Dropdown() {
             {isOpen ? 
                 <ul className="absolute">
                     {PAGES.map((page, index) => {
-                        return page.toLocaleLowerCase() != selection.toLocaleLowerCase() ?
+                        return page.toLocaleLowerCase() != selection?.toLocaleLowerCase() ?
                             <li key={index} className="hover:shadow-xl shadow shadow-gray-800 bg-gradient-to-r from-teal-800 to-teal-600 text-white px-4 py-2 text-center ml-8 rounded-md w-40 m-2">
                                 <Link onClick={handleClick} href={`/${page}`}>
                                     {page.toLocaleUpperCase()}
