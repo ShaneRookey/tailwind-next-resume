@@ -27,7 +27,7 @@ export default function Home() {
                     <br/><b>I enjoy working with React - which was used to create this website utilizing next.js and TailwindCss.</b>
                 </p>
                 <div className="relative mx-auto bg-gradient-to-b from-teal-800 overflow-clip rounded-full w-80 h-80 mt-4 shadow-md shadow-black">
-                    <Image className="cursor-pointer" onClick={() => setShowWorkExperience(!showWorkExperience)}src={shane} alt="Shane Rookey" style={{objectFit: "cover"}}/>
+                    <Image className="cursor-pointer" onClick={() => setShowWorkExperience(!showWorkExperience)} src={shane} alt="Shane Rookey" style={{objectFit: "cover"}}/>
                 </div>
                 {showWorkExperience ?
                     <Expertise /> 
