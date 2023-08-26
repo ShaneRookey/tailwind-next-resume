@@ -7,7 +7,7 @@ export default function Fun() {
     return (
         <>
             <div>
-                <Image src={dg} alt="Disc Golf Render" className="mx-auto mb-5" width={800} height={600} quality={100}/>
+                <Image src={dg} alt="Disc Golf Render" className="mx-auto mb-5" width={1920} height={1080} quality={100}/>
             </div>
             <div className="flex-1 max-w-max justify-center mx-auto">
                 <InstagramEmbed url="https://www.instagram.com/reel/CwLRuT0o5Js/" />
