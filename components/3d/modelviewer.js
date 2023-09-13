@@ -8,13 +8,13 @@ import { GltfModel } from "./gltfmodel";
 
 const ModelViewer = () => {
     return (
-        <Canvas camera={{ position: [5, 0, 15], fov: 15 }} >
-                <spotLight position={[0, 15, 0]} angle={0.3} penumbra={1} castShadow intensity={2} shadow-bias={-0.0001} />
-                <GltfModel />
-                <Environment resolution={256} background blur={1}>
-                    <Lightformers />
-                </Environment>
-                <OrbitControls />
+        <Canvas camera={{ position: [5, 0, 15], fov: 15 }}>
+            <spotLight position={[0, 15, 0]} angle={0.3} penumbra={1} castShadow intensity={2} shadow-bias={-0.0001} />
+            <GltfModel />
+            <Environment resolution={256} background blur={1}>
+                <Lightformers />
+            </Environment>
+            <OrbitControls />
         </Canvas>
     );
 };
