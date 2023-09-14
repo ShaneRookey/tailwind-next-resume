@@ -3,7 +3,7 @@ import Dropdown from "./buttons/dropdown";
 
 function Header() {
     return ( 
-        <nav className='py-6 mb-6 flex justify-between'>
+        <nav className='px-10 py-6 mb-6 flex justify-between'>
             <div>
                 <h1 className='text-sm font-burtons pt-2 text-teal-700 dark:text-white'>Created by Shane Rookey</h1>
                 <h2 className='text-xs font-burtons  text-teal-700 dark:text-white'>Powered By React, Next.js & Tailwind.css</h2>
