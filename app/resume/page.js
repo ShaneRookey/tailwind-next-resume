@@ -9,6 +9,5 @@ export default function Resume() {
             <Expertise />
             <Link className="text-black dark:text-white ml-8" target="_blank" href={GOOGLE_RESUME}>Link to the plain ole&apos; boring resume</Link>
         </div>
-    
     );
 }
