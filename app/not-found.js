@@ -1,7 +1,14 @@
+import { Button } from "@mui/material";
+
 function NotFound() {
-    return (
-        <div>Lost?</div>
-    );
+  return (
+    <>
+      <h1 className="font-burtons text-2xl">Whoops! How'd you get here?</h1>
+      <Button size="large" href="/">
+        HOME
+      </Button>
+    </>
+  );
 }
 
 export default NotFound;
