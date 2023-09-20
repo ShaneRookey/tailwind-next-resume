@@ -1,26 +1,28 @@
 'use client'
+import { CircularProgress } from "@mui/material";
 import { Environment, Float, Lightformer, OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Color, Depth, LayerMaterial } from 'lamina';
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import * as THREE from 'three';
-import { GltfModel } from "./gltfmodel";
 
 
-const ModelViewer = () => {
+const ModelViewer = ({orbit = false, children, ...props}) => {
     return (
-        <Canvas camera={{ position: [5, 0, 15], fov: 15 }}>
-            <spotLight position={[0, 15, 0]} angle={0.3} penumbra={1} castShadow intensity={2} shadow-bias={-0.0001} />
-            <GltfModel />
-            <Environment resolution={256} background blur={1}>
-                <Lightformers />
-            </Environment>
-            <OrbitControls />
-        </Canvas>
+        <Suspense fallback={<CircularProgress size={100}/>} {...props}>
+            <Canvas camera={{ position: [5, 0, 15], fov: 15 }}>
+                <spotLight position={[0, 15, 0]} angle={0.3} penumbra={1} castShadow intensity={2} shadow-bias={-0.0001} />
+                {children}
+                <Environment resolution={256} background blur={1}>
+                    <Lightformers />
+                </Environment>
+                {orbit ? <OrbitControls /> : undefined}
+            </Canvas>
+        </Suspense>
     );
 };
 
-function Lightformers({ positions = [2, 0, 2, 0, 2, 0, 2, 0] }) {
+export function Lightformers({ positions = [2, 0, 2, 0, 2, 0, 2, 0] }) {
     const group = useRef()
     useFrame((state, delta) => (group.current.position.z += delta * 10) > 20 && (group.current.position.z = -60))
     return (
