@@ -13,7 +13,7 @@ export default function Fun() {
         quality={100}
         width={1920}
         height={1080}
-        className="mb-5"
+        className="mb-5 self-center"
       />
       <Image
         priority
@@ -22,9 +22,9 @@ export default function Fun() {
         quality={100}
         width={1920}
         height={1080}
-        className="mb-5"
+        className="mb-5 self-center"
       />
-      <video loop controls className="mb-5">
+      <video loop controls className="mb-5 w-1/2 self-center">
         <source src="/donut.mp4" type="video/mp4" />
       </video>
     </div>
